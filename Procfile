@@ -1,1 +1,1 @@
-web: target/start -Dhttp.port=${PORT} -DapplyEvolutions.default=true -Ddb.default.url=${HEROKU_POSTGRESQL_BLUE_URL} -Ddb.default.driver=org.postgresql.Driver -Ddb.default.user=ixenuxqrnkcawo -Ddb.default.password=J2pT-aRG4khl1frZAyk29OIirL
+web: target/start -Dhttp.port=${PORT} -DapplyEvolutions.default=true -Ddb.default.url=${HEROKU_POSTGRESQL_CHARCOAL_URL} -Ddb.default.driver=org.postgresql.Driver -Ddb.default.user=rmihaabmnvjefh -Ddb.default.password=Pjve2zfm3QfiDZ79Xb9r78BGJq

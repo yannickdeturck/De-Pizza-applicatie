@@ -1,0 +1,46 @@
+# general
+date.format = dd/MM/yyyy
+application.title = De ABC-Groep Pizza applicatie
+application.slogan = Combining pasta expertise
+
+#actions
+create.text = Toevoegen
+cancel.text = Cancel
+back.text = Terug
+
+# Pizza's
+pizza.index.title = Beheren van de pizza's
+pizza.index.create.text = Pizza toevoegen
+pizza.index.pizzaNaam.text = Pizza naam
+pizza.index.hasTomato.text = Tomaten
+pizza.index.hasMozzarella.text = Mozzarella
+pizza.index.hasCheese.text = Kaas
+pizza.index.hasHam.text = Ham
+pizza.index.hasSalami.text = Salami
+pizza.index.no_pizzas = Er zijn nog geen pizza's toegevoegd.
+
+pizza.create.title = Pizza toevoegen
+pizza.create.pizzaNaam.text = Pizza naam
+pizza.create.hasTomato.text = Tomaten
+pizza.create.hasMozzarella.text = Mozzarella
+pizza.create.hasCheese.text = Kaas
+pizza.create.hasHam.text = Ham
+pizza.create.hasSalami.text = Salami
+
+# Bestellingen
+order.index.title = Overzicht bestellingen
+order.index.pizzas = Pizzas beheren
+order.index.create.text = Bestelling toevoegen
+order.index.pizzaName.text = Pizza
+order.index.quantity.text = Aantal
+order.index.customerName.text = Klantnaam
+order.index.remarks.text = Opmerkingen
+order.index.orderDate.text = Bestellingsdatum
+order.index.no_orders = Er zijn geen openstaande bestellingen.
+order.index.order_sent = De bestelling werd verstuurd!
+
+order.create.title = Bestelling toevoegen
+order.create.pizzaName.text = Pizza naam
+order.create.quantity.text = Aantal
+order.create.customerName.text = Klantnaam
+order.create.remarks.text = Opmerkingen

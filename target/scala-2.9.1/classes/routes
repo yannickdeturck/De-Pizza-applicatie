@@ -1,0 +1,22 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index
+
+# Pizzas
+GET		/pizza 						controllers.PizzaController.index
+POST	/pizza/:pizzaID/delete 		controllers.PizzaController.deletePizza(pizzaID: Long)
+GET		/pizza/create 				controllers.PizzaController.newPizza
+POST	/pizza/create 				controllers.PizzaController.createPizza
+
+# PizzaOrders
+GET     /orders                  	controllers.PizzaOrderController.index
+GET     /orders/create           	controllers.PizzaOrderController.newOrder
+POST    /orders/create           	controllers.PizzaOrderController.createOrder
+POST    /orders/:orderID/delete   	controllers.PizzaOrderController.deleteOrder(orderID: Long)
+POST	/orders/:orderID/sendOrder  controllers.PizzaOrderController.sendOrder(orderID: Long)
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file            	controllers.Assets.at(path="/public", file)

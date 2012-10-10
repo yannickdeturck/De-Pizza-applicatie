@@ -1,0 +1,14 @@
+run
+clean
+build
+compile
+run
+play deps --sync
+deps --sync
+dependencies --sync
+dependencies
+help
+run
+play
+run
+exit

@@ -9,7 +9,7 @@
         </p>
     }
 	<a class="btn" href="@controllers.routes.PizzaOrderController.newOrder"><i class="icon-plus-sign"></i> @Messages("order.index.create.text")</a>
-	<a class="btn" href="@controllers.routes.PizzaController.index"><i class="icon-adjust"></i> @Messages("pizza.index.create.text")</a>
+	<a class="btn" href="@controllers.routes.PizzaController.index"><i class="icon-adjust"></i> @Messages("order.index.pizzas.text")</a>
 	
 	@if(orders.isEmpty){
 		<br/><br/><p><i class="icon-info-sign"></i> @Messages("order.index.no_orders")</p>

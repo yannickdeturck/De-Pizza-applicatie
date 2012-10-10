@@ -51,10 +51,10 @@ object PizzaController extends Controller {
     Redirect(routes.PizzaController.index)
   }
 
-  // def lookUp() = Action { implicit request =>
-  //   val pizzas = Pizza.findAll()
-  //   val json = Json.generate(pizzas)
-  //   Ok(json).as("application/json")
-  // }
+  def lookUp() = Action { implicit request =>
+    val pizzas = Pizza.findAll()
+    val json = Json.generate(pizzas)
+    Ok(json).as("application/json")
+  }
 
 }

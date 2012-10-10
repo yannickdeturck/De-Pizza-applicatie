@@ -1,6 +1,6 @@
 // @SOURCE:/Users/yannickdt/Desktop/pizza-applicatie/conf/routes
-// @HASH:b9b3fef93de4d16af6e2dd4563373c52e6848d27
-// @DATE:Wed Oct 10 21:34:47 CEST 2012
+// @HASH:f819b59179ceb308ef42c13c8b1de5964b7f11cd
+// @DATE:Wed Oct 10 22:03:39 CEST 2012
 
 import play.core._
 import play.core.Router._
@@ -12,12 +12,13 @@ import play.api.mvc._
 import Router.queryString
 
 
-// @LINE:22
+// @LINE:23
+// @LINE:20
 // @LINE:19
 // @LINE:18
 // @LINE:17
 // @LINE:16
-// @LINE:15
+// @LINE:13
 // @LINE:12
 // @LINE:11
 // @LINE:10
@@ -25,6 +26,7 @@ import Router.queryString
 // @LINE:6
 package controllers {
 
+// @LINE:13
 // @LINE:12
 // @LINE:11
 // @LINE:10
@@ -52,6 +54,12 @@ def index() = {
 }
                                                         
  
+// @LINE:13
+def lookUp() = {
+   Call("GET", "/json/pizzas")
+}
+                                                        
+ 
 // @LINE:11
 def newPizza() = {
    Call("GET", "/pizza/create")
@@ -63,41 +71,41 @@ def newPizza() = {
 }
                             
 
+// @LINE:20
 // @LINE:19
 // @LINE:18
 // @LINE:17
 // @LINE:16
-// @LINE:15
 class ReversePizzaOrderController {
     
 
 
  
-// @LINE:19
+// @LINE:20
 def sendOrder(orderID:Long) = {
    Call("POST", "/orders/" + implicitly[PathBindable[Long]].unbind("orderID", orderID) + "/sendOrder")
 }
                                                         
  
-// @LINE:16
+// @LINE:17
 def newOrder() = {
    Call("GET", "/orders/create")
 }
                                                         
  
-// @LINE:15
+// @LINE:16
 def index() = {
    Call("GET", "/orders")
 }
                                                         
  
-// @LINE:18
+// @LINE:19
 def deleteOrder(orderID:Long) = {
    Call("POST", "/orders/" + implicitly[PathBindable[Long]].unbind("orderID", orderID) + "/delete")
 }
                                                         
  
-// @LINE:17
+// @LINE:18
 def createOrder() = {
    Call("POST", "/orders/create")
 }
@@ -125,13 +133,13 @@ def index() = {
 }
                             
 
-// @LINE:22
+// @LINE:23
 class ReverseAssets {
     
 
 
  
-// @LINE:22
+// @LINE:23
 def at(file:String) = {
    Call("GET", "/assets/" + implicitly[PathBindable[String]].unbind("file", file))
 }
@@ -145,12 +153,13 @@ def at(file:String) = {
                     
 
 
-// @LINE:22
+// @LINE:23
+// @LINE:20
 // @LINE:19
 // @LINE:18
 // @LINE:17
 // @LINE:16
-// @LINE:15
+// @LINE:13
 // @LINE:12
 // @LINE:11
 // @LINE:10
@@ -158,6 +167,7 @@ def at(file:String) = {
 // @LINE:6
 package controllers.javascript {
 
+// @LINE:13
 // @LINE:12
 // @LINE:11
 // @LINE:10
@@ -200,6 +210,17 @@ def index = JavascriptReverseRoute(
 )
                                                         
  
+// @LINE:13
+def lookUp = JavascriptReverseRoute(
+   "controllers.PizzaController.lookUp",
+   """
+      function() {
+      return _wA({method:"GET", url:"/json/pizzas"})
+      }
+   """
+)
+                                                        
+ 
 // @LINE:11
 def newPizza = JavascriptReverseRoute(
    "controllers.PizzaController.newPizza",
@@ -216,17 +237,17 @@ def newPizza = JavascriptReverseRoute(
 }
                             
 
+// @LINE:20
 // @LINE:19
 // @LINE:18
 // @LINE:17
 // @LINE:16
-// @LINE:15
 class ReversePizzaOrderController {
     
 
 
  
-// @LINE:19
+// @LINE:20
 def sendOrder = JavascriptReverseRoute(
    "controllers.PizzaOrderController.sendOrder",
    """
@@ -237,7 +258,7 @@ def sendOrder = JavascriptReverseRoute(
 )
                                                         
  
-// @LINE:16
+// @LINE:17
 def newOrder = JavascriptReverseRoute(
    "controllers.PizzaOrderController.newOrder",
    """
@@ -248,7 +269,7 @@ def newOrder = JavascriptReverseRoute(
 )
                                                         
  
-// @LINE:15
+// @LINE:16
 def index = JavascriptReverseRoute(
    "controllers.PizzaOrderController.index",
    """
@@ -259,7 +280,7 @@ def index = JavascriptReverseRoute(
 )
                                                         
  
-// @LINE:18
+// @LINE:19
 def deleteOrder = JavascriptReverseRoute(
    "controllers.PizzaOrderController.deleteOrder",
    """
@@ -270,7 +291,7 @@ def deleteOrder = JavascriptReverseRoute(
 )
                                                         
  
-// @LINE:17
+// @LINE:18
 def createOrder = JavascriptReverseRoute(
    "controllers.PizzaOrderController.createOrder",
    """
@@ -308,13 +329,13 @@ def index = JavascriptReverseRoute(
 }
                             
 
-// @LINE:22
+// @LINE:23
 class ReverseAssets {
     
 
 
  
-// @LINE:22
+// @LINE:23
 def at = JavascriptReverseRoute(
    "controllers.Assets.at",
    """
@@ -333,12 +354,13 @@ def at = JavascriptReverseRoute(
                     
 
 
-// @LINE:22
+// @LINE:23
+// @LINE:20
 // @LINE:19
 // @LINE:18
 // @LINE:17
 // @LINE:16
-// @LINE:15
+// @LINE:13
 // @LINE:12
 // @LINE:11
 // @LINE:10
@@ -346,6 +368,7 @@ def at = JavascriptReverseRoute(
 // @LINE:6
 package controllers.ref {
 
+// @LINE:13
 // @LINE:12
 // @LINE:11
 // @LINE:10
@@ -373,6 +396,12 @@ def index() = new play.api.mvc.HandlerRef(
 )
                               
  
+// @LINE:13
+def lookUp() = new play.api.mvc.HandlerRef(
+   controllers.PizzaController.lookUp(), HandlerDef(this, "controllers.PizzaController", "lookUp", Seq())
+)
+                              
+ 
 // @LINE:11
 def newPizza() = new play.api.mvc.HandlerRef(
    controllers.PizzaController.newPizza(), HandlerDef(this, "controllers.PizzaController", "newPizza", Seq())
@@ -384,41 +413,41 @@ def newPizza() = new play.api.mvc.HandlerRef(
 }
                             
 
+// @LINE:20
 // @LINE:19
 // @LINE:18
 // @LINE:17
 // @LINE:16
-// @LINE:15
 class ReversePizzaOrderController {
     
 
 
  
-// @LINE:19
+// @LINE:20
 def sendOrder(orderID:Long) = new play.api.mvc.HandlerRef(
    controllers.PizzaOrderController.sendOrder(orderID), HandlerDef(this, "controllers.PizzaOrderController", "sendOrder", Seq(classOf[Long]))
 )
                               
  
-// @LINE:16
+// @LINE:17
 def newOrder() = new play.api.mvc.HandlerRef(
    controllers.PizzaOrderController.newOrder(), HandlerDef(this, "controllers.PizzaOrderController", "newOrder", Seq())
 )
                               
  
-// @LINE:15
+// @LINE:16
 def index() = new play.api.mvc.HandlerRef(
    controllers.PizzaOrderController.index(), HandlerDef(this, "controllers.PizzaOrderController", "index", Seq())
 )
                               
  
-// @LINE:18
+// @LINE:19
 def deleteOrder(orderID:Long) = new play.api.mvc.HandlerRef(
    controllers.PizzaOrderController.deleteOrder(orderID), HandlerDef(this, "controllers.PizzaOrderController", "deleteOrder", Seq(classOf[Long]))
 )
                               
  
-// @LINE:17
+// @LINE:18
 def createOrder() = new play.api.mvc.HandlerRef(
    controllers.PizzaOrderController.createOrder(), HandlerDef(this, "controllers.PizzaOrderController", "createOrder", Seq())
 )
@@ -446,13 +475,13 @@ def index() = new play.api.mvc.HandlerRef(
 }
                             
 
-// @LINE:22
+// @LINE:23
 class ReverseAssets {
     
 
 
  
-// @LINE:22
+// @LINE:23
 def at(path:String, file:String) = new play.api.mvc.HandlerRef(
    controllers.Assets.at(path, file), HandlerDef(this, "controllers.Assets", "at", Seq(classOf[String], classOf[String]))
 )

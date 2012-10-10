@@ -10,6 +10,7 @@ GET		/pizza 						controllers.PizzaController.index
 POST	/pizza/:pizzaID/delete 		controllers.PizzaController.deletePizza(pizzaID: Long)
 GET		/pizza/create 				controllers.PizzaController.newPizza
 POST	/pizza/create 				controllers.PizzaController.createPizza
+GET		/json/pizzas 				controllers.PizzaController.lookUp
 
 # PizzaOrders
 GET     /orders                  	controllers.PizzaOrderController.index

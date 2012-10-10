@@ -1,6 +1,6 @@
 # general
 date.format = dd/MM/yyyy
-application.title = De ABC-Groep Pizza applicatie
+application.title = De Pizza applicatie
 application.slogan = Combining pasta expertise
 
 #actions
@@ -11,7 +11,7 @@ back.text = Terug
 # Pizza's
 pizza.index.title = Beheren van de pizza's
 pizza.index.create.text = Pizza toevoegen
-pizza.index.pizzaNaam.text = Pizza naam
+pizza.index.pizzaName.text = Pizza naam
 pizza.index.hasTomato.text = Tomaten
 pizza.index.hasMozzarella.text = Mozzarella
 pizza.index.hasCheese.text = Kaas
@@ -20,7 +20,7 @@ pizza.index.hasSalami.text = Salami
 pizza.index.no_pizzas = Er zijn nog geen pizza's toegevoegd.
 
 pizza.create.title = Pizza toevoegen
-pizza.create.pizzaNaam.text = Pizza naam
+pizza.create.pizzaName.text = Pizza naam
 pizza.create.hasTomato.text = Tomaten
 pizza.create.hasMozzarella.text = Mozzarella
 pizza.create.hasCheese.text = Kaas
@@ -29,7 +29,7 @@ pizza.create.hasSalami.text = Salami
 
 # Bestellingen
 order.index.title = Overzicht bestellingen
-order.index.pizzas = Pizzas beheren
+order.index.pizzas.text = Pizza's beheren
 order.index.create.text = Bestelling toevoegen
 order.index.pizzaName.text = Pizza
 order.index.quantity.text = Aantal

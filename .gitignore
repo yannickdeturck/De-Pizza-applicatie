@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 # Extracted from https://github.com/ulrich/macaron-factory/blob/master/.gitignore
+=======
+>>>>>>> Correcting some things
 # Ignore all dotfiles...
 .*
 # except for .gitignore
 !.gitignore
 
+<<<<<<< HEAD
 # Ignore Play! working directory #
 db
 eclipse
@@ -14,3 +18,11 @@ tmp
 test-result
 eclipse
 server.pid
+=======
+logs
+project/project
+project/target
+target
+tmp
+dist
+>>>>>>> Correcting some things

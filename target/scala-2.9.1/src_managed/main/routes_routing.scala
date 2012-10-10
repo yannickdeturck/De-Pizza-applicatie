@@ -1,6 +1,6 @@
 // @SOURCE:/Users/yannickdt/Desktop/pizza-applicatie/conf/routes
-// @HASH:b9b3fef93de4d16af6e2dd4563373c52e6848d27
-// @DATE:Wed Oct 10 21:34:47 CEST 2012
+// @HASH:f819b59179ceb308ef42c13c8b1de5964b7f11cd
+// @DATE:Wed Oct 10 22:03:39 CEST 2012
 
 import play.core._
 import play.core.Router._
@@ -34,30 +34,34 @@ val controllers_PizzaController_newPizza3 = Route("GET", PathPattern(List(Static
 val controllers_PizzaController_createPizza4 = Route("POST", PathPattern(List(StaticPart("/pizza/create"))))
                     
 
-// @LINE:15
-val controllers_PizzaOrderController_index5 = Route("GET", PathPattern(List(StaticPart("/orders"))))
+// @LINE:13
+val controllers_PizzaController_lookUp5 = Route("GET", PathPattern(List(StaticPart("/json/pizzas"))))
                     
 
 // @LINE:16
-val controllers_PizzaOrderController_newOrder6 = Route("GET", PathPattern(List(StaticPart("/orders/create"))))
+val controllers_PizzaOrderController_index6 = Route("GET", PathPattern(List(StaticPart("/orders"))))
                     
 
 // @LINE:17
-val controllers_PizzaOrderController_createOrder7 = Route("POST", PathPattern(List(StaticPart("/orders/create"))))
+val controllers_PizzaOrderController_newOrder7 = Route("GET", PathPattern(List(StaticPart("/orders/create"))))
                     
 
 // @LINE:18
-val controllers_PizzaOrderController_deleteOrder8 = Route("POST", PathPattern(List(StaticPart("/orders/"),DynamicPart("orderID", """[^/]+"""),StaticPart("/delete"))))
+val controllers_PizzaOrderController_createOrder8 = Route("POST", PathPattern(List(StaticPart("/orders/create"))))
                     
 
 // @LINE:19
-val controllers_PizzaOrderController_sendOrder9 = Route("POST", PathPattern(List(StaticPart("/orders/"),DynamicPart("orderID", """[^/]+"""),StaticPart("/sendOrder"))))
+val controllers_PizzaOrderController_deleteOrder9 = Route("POST", PathPattern(List(StaticPart("/orders/"),DynamicPart("orderID", """[^/]+"""),StaticPart("/delete"))))
                     
 
-// @LINE:22
-val controllers_Assets_at10 = Route("GET", PathPattern(List(StaticPart("/assets/"),DynamicPart("file", """.+"""))))
+// @LINE:20
+val controllers_PizzaOrderController_sendOrder10 = Route("POST", PathPattern(List(StaticPart("/orders/"),DynamicPart("orderID", """[^/]+"""),StaticPart("/sendOrder"))))
                     
-def documentation = List(("""GET""","""/""","""controllers.Application.index"""),("""GET""","""/pizza""","""controllers.PizzaController.index"""),("""POST""","""/pizza/$pizzaID<[^/]+>/delete""","""controllers.PizzaController.deletePizza(pizzaID:Long)"""),("""GET""","""/pizza/create""","""controllers.PizzaController.newPizza"""),("""POST""","""/pizza/create""","""controllers.PizzaController.createPizza"""),("""GET""","""/orders""","""controllers.PizzaOrderController.index"""),("""GET""","""/orders/create""","""controllers.PizzaOrderController.newOrder"""),("""POST""","""/orders/create""","""controllers.PizzaOrderController.createOrder"""),("""POST""","""/orders/$orderID<[^/]+>/delete""","""controllers.PizzaOrderController.deleteOrder(orderID:Long)"""),("""POST""","""/orders/$orderID<[^/]+>/sendOrder""","""controllers.PizzaOrderController.sendOrder(orderID:Long)"""),("""GET""","""/assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""))
+
+// @LINE:23
+val controllers_Assets_at11 = Route("GET", PathPattern(List(StaticPart("/assets/"),DynamicPart("file", """.+"""))))
+                    
+def documentation = List(("""GET""","""/""","""controllers.Application.index"""),("""GET""","""/pizza""","""controllers.PizzaController.index"""),("""POST""","""/pizza/$pizzaID<[^/]+>/delete""","""controllers.PizzaController.deletePizza(pizzaID:Long)"""),("""GET""","""/pizza/create""","""controllers.PizzaController.newPizza"""),("""POST""","""/pizza/create""","""controllers.PizzaController.createPizza"""),("""GET""","""/json/pizzas""","""controllers.PizzaController.lookUp"""),("""GET""","""/orders""","""controllers.PizzaOrderController.index"""),("""GET""","""/orders/create""","""controllers.PizzaOrderController.newOrder"""),("""POST""","""/orders/create""","""controllers.PizzaOrderController.createOrder"""),("""POST""","""/orders/$orderID<[^/]+>/delete""","""controllers.PizzaOrderController.deleteOrder(orderID:Long)"""),("""POST""","""/orders/$orderID<[^/]+>/sendOrder""","""controllers.PizzaOrderController.sendOrder(orderID:Long)"""),("""GET""","""/assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""))
              
     
 def routes:PartialFunction[RequestHeader,Handler] = {        
@@ -102,48 +106,56 @@ case controllers_PizzaController_createPizza4(params) => {
 }
                     
 
-// @LINE:15
-case controllers_PizzaOrderController_index5(params) => {
+// @LINE:13
+case controllers_PizzaController_lookUp5(params) => {
+   call { 
+        invokeHandler(_root_.controllers.PizzaController.lookUp, HandlerDef(this, "controllers.PizzaController", "lookUp", Nil))
+   }
+}
+                    
+
+// @LINE:16
+case controllers_PizzaOrderController_index6(params) => {
    call { 
         invokeHandler(_root_.controllers.PizzaOrderController.index, HandlerDef(this, "controllers.PizzaOrderController", "index", Nil))
    }
 }
                     
 
-// @LINE:16
-case controllers_PizzaOrderController_newOrder6(params) => {
+// @LINE:17
+case controllers_PizzaOrderController_newOrder7(params) => {
    call { 
         invokeHandler(_root_.controllers.PizzaOrderController.newOrder, HandlerDef(this, "controllers.PizzaOrderController", "newOrder", Nil))
    }
 }
                     
 
-// @LINE:17
-case controllers_PizzaOrderController_createOrder7(params) => {
+// @LINE:18
+case controllers_PizzaOrderController_createOrder8(params) => {
    call { 
         invokeHandler(_root_.controllers.PizzaOrderController.createOrder, HandlerDef(this, "controllers.PizzaOrderController", "createOrder", Nil))
    }
 }
                     
 
-// @LINE:18
-case controllers_PizzaOrderController_deleteOrder8(params) => {
+// @LINE:19
+case controllers_PizzaOrderController_deleteOrder9(params) => {
    call(params.fromPath[Long]("orderID", None)) { (orderID) =>
         invokeHandler(_root_.controllers.PizzaOrderController.deleteOrder(orderID), HandlerDef(this, "controllers.PizzaOrderController", "deleteOrder", Seq(classOf[Long])))
    }
 }
                     
 
-// @LINE:19
-case controllers_PizzaOrderController_sendOrder9(params) => {
+// @LINE:20
+case controllers_PizzaOrderController_sendOrder10(params) => {
    call(params.fromPath[Long]("orderID", None)) { (orderID) =>
         invokeHandler(_root_.controllers.PizzaOrderController.sendOrder(orderID), HandlerDef(this, "controllers.PizzaOrderController", "sendOrder", Seq(classOf[Long])))
    }
 }
                     
 
-// @LINE:22
-case controllers_Assets_at10(params) => {
+// @LINE:23
+case controllers_Assets_at11(params) => {
    call(Param[String]("path", Right("/public")), params.fromPath[String]("file", None)) { (path, file) =>
         invokeHandler(_root_.controllers.Assets.at(path, file), HandlerDef(this, "controllers.Assets", "at", Seq(classOf[String], classOf[String])))
    }

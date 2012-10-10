@@ -1,6 +1,6 @@
 // @SOURCE:/Users/yannickdt/Desktop/pizza-applicatie/conf/routes
-// @HASH:b9b3fef93de4d16af6e2dd4563373c52e6848d27
-// @DATE:Wed Oct 10 21:34:47 CEST 2012
+// @HASH:f819b59179ceb308ef42c13c8b1de5964b7f11cd
+// @DATE:Wed Oct 10 22:03:39 CEST 2012
 
 package controllers;
 

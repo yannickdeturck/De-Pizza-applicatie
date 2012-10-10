@@ -6,7 +6,7 @@
 
 @main(Messages("pizza.create.title")) {
 	@form(action = routes.PizzaController.createPizza, 'class -> "form-horizontal") {
-	    @inputText(pizzaForm("pizzaNaam"), '_label -> Messages("pizza.create.pizzaNaam.text"))
+	    @inputText(pizzaForm("pizzaNaam"), '_label -> Messages("pizza.create.pizzaName.text"))
 	    @checkbox(pizzaForm("hasTomato"), '_label -> Messages("pizza.create.hasTomato.text"))
 	    @checkbox(pizzaForm("hasMozzarella"), '_label -> Messages("pizza.create.hasMozzarella.text"))
 	    @checkbox(pizzaForm("hasCheese"), '_label -> Messages("pizza.create.hasCheese.text"))
